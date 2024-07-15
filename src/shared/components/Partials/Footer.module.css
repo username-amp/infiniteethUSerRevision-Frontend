@@ -1,0 +1,78 @@
+.mainWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    padding-block: 48px;
+    background-color: #335271;
+    color: #fff;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 9rem;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 2rem;
+    gap: 1rem; /* Add some space between the icons */
+}
+
+.socialMedia a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 8px;
+}
+
+.dentalCertified img {
+    max-width: 300px;
+    object-fit: cover;
+    height: auto;
+    border-radius: 20%;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 7rem;
+    padding-block: 3rem;
+    background-color: rgb(0, 32, 60);
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .mainWrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #00203f;
+    }
+
+    .socialMedia {
+        gap: 0.5rem; /* Adjust gap for smaller screens */
+    }
+
+    .socialMedia a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block: 2rem;
+        color: white;
+    }
+}

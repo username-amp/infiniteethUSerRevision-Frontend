@@ -1,0 +1,102 @@
+/* Reset and Normalize */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Links */
+.underline-animation {
+  position: relative;
+  display: inline-block;
+  color: #fff; /* Ensure links are white */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.2s ease-in-out; /* Smooth color transition */
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff; /* Underline color */
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Active Link State */
+.active-link {
+  color: #70a4e4; /* Active link color */
+}
+
+/* Ensure consistent button styles */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit; /* Inherit text color */
+}
+
+/* Ensure hamburger icon color is white */
+button svg {
+  stroke: #fff;
+}
+
+/* Adjust menu link spacing and alignment */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: auto; /* Push links to the right */
+}
+
+nav ul li {
+  margin-right: 1rem; /* Adjust spacing between links */
+}
+
+/* Dropdown Menu Styles */
+.nav-link {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent */
+  left: 0;
+  background-color: #1a202c; /* Dropdown background color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Add padding */
+  display: grid; /* Use grid layout */
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 10px; /* Gap between columns */
+}
+
+.nav-link:hover .dropdown-menu {
+  display: grid;
+}
+
+.dropdown-menu a {
+  color: white; /* Dropdown link color */
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out; /* Smooth background transition */
+}
+
+.dropdown-menu a:hover {
+  background-color: #575757; /* Dropdown link hover background */
+}

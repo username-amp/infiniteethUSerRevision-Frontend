@@ -1,0 +1,21 @@
+/* OurTeam.css */
+.our-team-slide-in {
+    opacity: 0;
+    transform: translateX(900px);
+  }
+  
+  .our-team-slide-in.active {
+    animation: ourTeamSlideInAnimation 1s ease forwards;
+  }
+  
+  @keyframes ourTeamSlideInAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(900px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
